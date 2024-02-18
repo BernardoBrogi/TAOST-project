@@ -10,6 +10,7 @@ public class collison_haptic : MonoBehaviour
 
     //public Collider obj;
     private Vector3 collision_enter;
+
     //public Transform obj;
     private Vector3 centre;
     private float distance_object;
@@ -28,7 +29,6 @@ public class collison_haptic : MonoBehaviour
 
     }
 
-    
     private void OnTriggerStay(Collider other)
     {
         // In order to avoid internal collission, we check only if the collision occurs 
@@ -58,6 +58,7 @@ public class collison_haptic : MonoBehaviour
         }
     }
 
+    // When the hand releases the object, the force feedback needs to be null
     private void OnTriggerExit(Collider other)
     {
         Force F = new Force();
